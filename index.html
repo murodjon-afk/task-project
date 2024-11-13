@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+         <div class="info-dash">
+            <h1>Dashboard</h1>
+            <button class="add-task">Добавить задачу</button>
+         </div>
+          <input type="text" placeholder="Поиск по задачам" class="search-bar">
+        </div>
+        <div class="task-view-options">
+          <label>Показать задачи как:</label>
+          <button class="view-table">Таблица</button>
+          <button class="view-toggle">Плитка</button>
+       
+        </div>
+        <div class="task-list">
+          <div class="task-header">
+            <div class="task-title">Заголовок задачи</div>
+            <div class="task-desc">Описание задачи</div>
+            <div class="task-date">Дата</div>
+            <div class="task-time">Время</div>
+            <div class="task-status">Выполнено</div>
+          </div>
+         
+          
+        
+       
+        </div>
+
+       
+          <div class="task-block">
+          
+          </div>
+        
+          <div id="modalOverlay">
+            <div class="modal">
+                <a href="#" class="close-btn">&times;</a>
+                <h2>Добавить</h2>
+                <form onsubmit="addPost(event)">
+                    <input type="text" name="title" placeholder="Заголовок" required />
+                    <input type="text" name="description" placeholder="Описание" required />
+                    <input type="time" name="time" placeholder="Время (type=time)" required />
+                    <input type="date" name="date" placeholder="Время (type=date)" required />
+                    <select name="status" required>
+                        <option value="">Тип задачи</option>
+                        <option value="new">New</option>
+                        <option value="progress">Progress</option>
+                        <option value="done">Done</option>
+                        <option value="not-completed">Not Completed</option>
+                    </select>
+                    <button type="submit">Добавить задачу</button>
+                </form>
+            </div>
+        </div>
+        
+     <script type="module" src="./script.js"></script>
+     <script src="./component/form.js"></script>
+</body>
+</html>
